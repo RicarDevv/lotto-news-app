@@ -1,0 +1,215 @@
+/* Centraliza o H1 e a Label */
+h1, label {
+    text-align: center;
+    display: block; /* Garante que a label ocupe a largura total para alinhar o texto */
+    margin-bottom: 10px;
+}
+
+/* Opcional: Melhorar o espaçamento do H1 */
+h1 
+{
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 0;
+}
+
+/* O restante permanece igual */
+body 
+    { font-family: sans-serif; 
+        background: #f4f4f9; 
+        display: flex; 
+        justify-content: center; 
+        padding: 50px; 
+    }
+
+.container 
+    { background: white; 
+        padding: 20px; 
+        border-radius: 8px; 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+        width: 400px; 
+    }
+
+input, select, button 
+    { width: 100%; 
+        margin: 10px 0; 
+        padding: 12px; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+        box-sizing: border-box; 
+    }
+
+button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.2s; /* Transição suave */
+}
+
+button:active {
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+    #resultado small 
+    {
+        display: block;
+        margin-top: 10px;
+        color: #666;
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .voltar-flutuante {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    background-color: #ffffff;
+    color: #333;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+    border: 1px solid #eee;
+}
+
+.voltar-flutuante i {
+    font-size: 1.4rem;
+}
+
+/* Efeito ao passar o mouse */
+.voltar-flutuante:hover {
+    transform: scale(1.15);
+    background-color: #f8f9fa;
+    color: #209852; /* Fica verde ao interagir */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Opção com Emoji (caso não queira usar Font Awesome) */
+/* .voltar-flutuante::after { content: '🏠'; font-size: 1.5rem; } */
+
+.numeros-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.bolinha {
+    width: 45px;
+    height: 45px;
+    background: radial-gradient(circle at 30% 30%, #ffffff, #e0e0e0);
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+    animation: popIn 0.3s ease-out forwards;
+}
+
+.bolinha.trevo {
+    background: radial-gradient(circle at 30% 30%, #fff9c4, #fbc02d);
+    border-color: #f9a825;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    80% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.acoes-gerador {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-acao {
+    flex: 1;
+    background-color: #666;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-acao:hover {
+    background-color: #444;
+}
+
+.btn-limpar {
+    background-color: #dc3545; /* Vermelho para o botão limpar */
+}
+
+.btn-limpar:hover {
+    background-color: #a71d2a;
+}
+
+.ranking-container {
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ranking-table th {
+    text-align: left;
+    padding: 10px;
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.ranking-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.rank-bola {
+    background: #209852;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Barra de Popularidade */
+.bar-container {
+    background: #eee;
+    height: 8px;
+    border-radius: 4px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bar-fill {
+    background: linear-gradient(to right, #209852, #a5d6a7);
+    height: 100%;
+    border-radius: 4px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

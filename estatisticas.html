@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Estatísticas - LottoNews</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div id="graficoContainer" style="width: 100%; max-width: 300px; margin: 20px auto; display: none;">
+    <canvas id="pieChartParesImpares"></canvas>
+</div>
+</head>
+<body>
+    <a href="index.html" class="voltar-flutuante" title="Voltar para a Home">
+        <i class="fa-solid fa-house"></i>
+    </a>
+
+    <div class="container" style="max-width: 500px;">
+        <h1>Números Mais Sorteados</h1>
+        <p style="text-align: center; margin-bottom: 20px;">Análise baseada em todo o histórico de sorteios.</p>
+
+        <label>Escolha a Loteria:</label>
+        <select id="tipoJogoEstatistica" onchange="calcularEstatisticas()">
+            <option value="megasena">Mega-Sena</option>
+            <option value="lotofacil">Lotofácil</option>
+            <option value="quina">Quina</option>
+            <option value="lotomania">Lotomania</option>
+            <option value="duplasena">Dupla Sena</option>
+            <option value="diadesorte">Dia de Sorte</option>
+            <option value="supersete">Super Sete</option>
+            <option value="maismilionaria">+Milionária</option>
+        </select>
+
+        <div id="loading" style="display:none; text-align:center; margin: 20px;">
+            <i class="fa-solid fa-spinner fa-spin"></i> Processando dados...
+        </div>
+
+        <div id="tabelaEstatisticas" class="ranking-container">
+            </div>
+    </div>
+
+    <script src="estatisticas.js"></script>
+</body>
+</html>

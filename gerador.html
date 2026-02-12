@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Jogos - LottoNews</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <a href="index.html" class="voltar-flutuante" title="Voltar para a Home">
+        <i class="fa-solid fa-house"></i>
+    </a>
+
+    <div class="container">
+    <h1>Gerador de Jogos</h1>
+    <label>Selecione a modalidade:</label>
+    <select id="tipoJogoGerador">
+        <option value="megasena">Mega-Sena</option>
+        <option value="lotofacil">Lotofácil</option>
+        <option value="quina">Quina</option>
+        <option value="lotomania">Lotomania</option>
+        <option value="duplasena">Dupla Sena</option>
+        <option value="diadesorte">Dia de Sorte</option>
+        <option value="supersete">Super Sete</option>
+        <option value="maismilionaria">+Milionária</option>
+    </select>
+
+    <button id="btnGerar" onclick="gerarNumeros()">Gerar Números Aleatórios</button>
+    
+    <div class="acoes-gerador">
+        <button onclick="copiarNumeros()" class="btn-acao"><i class="fa-solid fa-copy"></i> Copiar</button>
+        <button onclick="limparTudo()" class="btn-acao btn-limpar"><i class="fa-solid fa-trash"></i> Limpar</button>
+    </div>
+
+    <div id="areaNumeros" class="numeros-container"></div>
+</div>
+
+    <script src="gerador.js"></script>
+</body>
+</html>

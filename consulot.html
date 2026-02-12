@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>ConsuLot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <h1>ConsuLot</h1>
+        
+        <label>Escolha a Loteria:</label> boa tar
+<select id="tipoJogo">
+    <option value="megasena">Mega-Sena</option>
+    <option value="lotofacil">Lotofácil</option>
+    <option value="lotomania">Lotomania</option>
+    <option value="quina">Quina</option>
+    <option value="duplasena">Dupla Sena</option>
+    <option value="diadesorte">Dia de Sorte</option>
+    <option value="supersete">Super Sete</option>
+    <option value="maismilionaria">+Milionária</option>
+</select>
+
+        <p>Insira os números separados por espaço ou vírgula:</p>
+        <input type="text" id="numerosUsuario" placeholder="Ex: 05, 12, 33, 45, 52, 60">
+        
+        <button onclick="verificarJogo()">Verificar Histórico</button>
+
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+
+<a href="index.html" class="voltar-flutuante" title="Voltar para a Home">
+    <i class="fa-solid fa-house"></i> </a>
+</a>
+</body>
+</html>
